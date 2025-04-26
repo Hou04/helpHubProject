@@ -1,0 +1,316 @@
+/* Variables matching index.css */
+:root {
+    --primary-color: #4CAF50;
+    --secondary-color: #5cff8a;
+    --bg-primary: #ffffff;
+    --text-color: #222222;
+    --text-color-two: #ffffff;
+    --bg-secondary: #000000;
+    --card-background: #f4f4f4;
+    --bg-secondary-two: #111111;
+    --shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  }
+  
+  [data-theme="dark"] {
+    --primary-color: #4CAF50;
+    --secondary-color: #5cff8a;
+    --bg-primary: #000000;
+    --text-color: #ffffff;
+    --text-color-two: #222222;
+    --bg-secondary: #ffffff;
+    --card-background: #111111;
+    --bg-secondary-two: #f4f4f4;
+    --shadow: 0 2px 10px rgba(95, 95, 95, 0.2);
+  }
+  
+  /* Donor Dashboard Styles */
+  .donor-container {
+      display: flex;
+      min-height: 100vh;
+      background-color: var(--bg-primary);
+      color: var(--text-color);
+      font-family: "Raleway", sans-serif;
+  }
+  
+  .donor-sidebar {
+      width: 280px;
+      background-color: var(--bg-secondary);
+      color: var(--text-color-two);
+      padding: 2rem 1rem;
+      position: fixed;
+      height: 100%;
+  }
+  
+  .sidebar-header {
+      text-align: center;
+      margin-bottom: 2rem;
+  }
+  
+  .sidebar-logo {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      margin-bottom: 1rem;
+      object-fit: cover;
+  }
+  
+  .sidebar-nav {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+  }
+  
+  .sidebar-nav a {
+      color: var(--text-color-two);
+      text-decoration: none;
+      padding: 0.8rem 1rem;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+  }
+  
+  .sidebar-nav a:hover, .sidebar-nav a.active {
+      background-color: var(--primary-color);
+      color: var(--text-color-two);
+  }
+  
+  .donor-main {
+      flex: 1;
+      margin-left: 280px;
+      padding: 2rem;
+  }
+  
+  .donor-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 2rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid var(--card-background);
+  }
+  
+  .user-info {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+  }
+  
+  .user-avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      object-fit: cover;
+  }
+  
+  .donor-stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 3rem;
+  }
+  
+  .stat-card {
+      background-color: var(--bg-primary);
+      border-radius: 8px;
+      padding: 1.5rem;
+      box-shadow: var(--shadow);
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      transition: transform 0.3s ease;
+  }
+  
+  .stat-card:hover {
+      transform: translateY(-5px);
+  }
+  
+  .stat-icon {
+      font-size: 1.8rem;
+      color: var(--primary-color);
+      width: 50px;
+      height: 50px;
+      background-color: rgba(76, 175, 80, 0.1);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+  
+  .stat-info h3 {
+      font-size: 1rem;
+      margin-bottom: 0.5rem;
+      color: var(--text-color);
+  }
+  
+  .stat-info p {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin: 0;
+      color: var(--primary-color);
+  }
+  
+  .donor-projects, .donor-history {
+      margin-bottom: 3rem;
+  }
+  
+  .donor-projects h3, .donor-history h3 {
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      color: var(--text-color);
+  }
+  
+  .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1.5rem;
+  }
+  
+  .project-card {
+      background-color: var(--bg-primary);
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: transform 0.3s ease;
+  }
+  
+  .project-card:hover {
+      transform: translateY(-5px);
+  }
+  
+  .project-image {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+  }
+  
+  .project-info {
+      padding: 1.5rem;
+  }
+  
+  .project-title {
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+      color: var(--text-color);
+  }
+  
+  .project-description {
+      font-size: 0.9rem;
+      color: var(--text-color);
+      margin-bottom: 1rem;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+  }
+  
+  .progress-container {
+      margin-bottom: 1rem;
+  }
+  
+  .progress-label {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 0.3rem;
+      font-size: 0.8rem;
+      color: var(--text-color);
+  }
+  
+  .progress-bar {
+      height: 8px;
+      background-color: var(--card-background);
+      border-radius: 4px;
+      overflow: hidden;
+  }
+  
+  .progress {
+      height: 100%;
+      background-color: var(--primary-color);
+      border-radius: 4px;
+  }
+  
+  .project-actions {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  }
+  
+  .btn-donate {
+      background-color: var(--primary-color);
+      color: var(--text-color-two);
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+  }
+  
+  .btn-donate:hover {
+      background-color: var(--secondary-color);
+  }
+  
+  .donations-list {
+      background-color: var(--bg-primary);
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+  }
+  
+  .donation-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 1.5rem;
+      border-bottom: 1px solid var(--card-background);
+  }
+  
+  .donation-item:last-child {
+      border-bottom: none;
+  }
+  
+  .donation-info h4 {
+      margin: 0;
+      font-size: 1rem;
+      color: var(--text-color);
+  }
+  
+  .donation-info p {
+      margin: 0.3rem 0 0;
+      font-size: 0.8rem;
+      color: var(--text-color);
+  }
+  
+  .donation-amount {
+      font-weight: 600;
+      color: var(--primary-color);
+  }
+  
+  @media (max-width: 992px) {
+      .donor-sidebar {
+          width: 240px;
+      }
+      .donor-main {
+          margin-left: 240px;
+      }
+  }
+  
+  @media (max-width: 768px) {
+      .donor-container {
+          flex-direction: column;
+      }
+      .donor-sidebar {
+          width: 100%;
+          position: static;
+          height: auto;
+      }
+      .donor-main {
+          margin-left: 0;
+      }
+      .donor-stats {
+          grid-template-columns: 1fr;
+      }
+  }

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription - HelpHub</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="signup.css" rel="stylesheet">
+</head>
+<body>
+    <div class="signup-container">
+        <div class="signup-card">
+            <img src="assets/logo.webp" alt="HelpHub Logo" class="signup-logo">
+            <h2>Créer un compte</h2>
+            
+            <div class="user-type-toggle">
+                <button id="donorBtn" class="active">Je suis un donateur</button>
+                <button id="associationBtn">Je représente une association</button>
+            </div>
+            
+            <form id="donorForm" action="signup.php" method="POST">
+                <input type="hidden" name="user_type" value="donor">
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="donorFirstName">Prénom</label>
+                        <input type="text" id="donorFirstName" name="prenom" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="donorLastName">Nom</label>
+                        <input type="text" id="donorLastName" name="nom" required>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="donorEmail">Email</label>
+                    <input type="email" id="donorEmail" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="donorCIN">CIN (8 chiffres)</label>
+                    <input type="text" id="donorCIN" name="CIN" pattern="\d{8}" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="donorPseudo">Pseudo (lettres seulement)</label>
+                    <input type="text" id="donorPseudo" name="pseudo" pattern="[A-Za-z]+" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="donorPassword">Mot de passe (8+ caractères, finit par $ ou #)</label>
+                    <input type="password" id="donorPassword" name="pwrd" pattern=".{8,}[$#]" required>
+                </div>
+                
+                <button type="submit" class="btn-signup">S'inscrire</button>
+                
+                <div class="signup-links">
+                    <p>Déjà un compte? <a href="../login/login.html">Se connecter</a></p>
+                </div>
+            </form>
+            
+            <form id="associationForm" action="signup.php" method="POST" enctype="multipart/form-data" style="display: none;">
+                <input type="hidden" name="user_type" value="association">
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="assocFirstName">Prénom</label>
+                        <input type="text" id="assocFirstName" name="prenom" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="assocLastName">Nom</label>
+                        <input type="text" id="assocLastName" name="nom" required>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="assocEmail">Email</label>
+                    <input type="email" id="assocEmail" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="assocCIN">CIN (8 chiffres)</label>
+                    <input type="text" id="assocCIN" name="CIN" pattern="\d{8}" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="assocName">Nom de l'association</label>
+                    <input type="text" id="assocName" name="nom_association" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="assocAddress">Adresse de l'association</label>
+                    <input type="text" id="assocAddress" name="adresse_association" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="assocMatricule">Matricule fiscal ($ + 3 lettres + 2 chiffres)</label>
+                    <input type="text" id="assocMatricule" name="matricule_fiscal" pattern="^\$[A-Z]{3}\d{2}$" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="assocLogo">Logo (optionnel)</label>
+                    <input type="file" id="assocLogo" name="logo" accept="image/*">
+                </div>
+                
+                <div class="form-group">
+                    <label for="assocPseudo">Pseudo (lettres seulement)</label>
+                    <input type="text" id="assocPseudo" name="pseudo" pattern="[A-Za-z]+" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="assocPassword">Mot de passe (8+ caractères, finit par $ ou #)</label>
+                    <input type="password" id="assocPassword" name="pwrd" pattern=".{8,}[$#]" required>
+                </div>
+                
+                <button type="submit" class="btn-signup">S'inscrire</button>
+                
+                <div class="signup-links">
+                    <p>Déjà un compte? <a href="auth/login/login.html">Se connecter</a></p>
+                </div>
+            </form>
+            
+            <div id="errorMessage" class="error-message"></div>
+        </div>
+    </div>
+
+    <script src="signup.js"></script>
+</body>
+</html>

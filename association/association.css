@@ -1,0 +1,406 @@
+/* Variables matching index.css */
+:root {
+    --primary-color: #4CAF50;
+    --secondary-color: #5cff8a;
+    --bg-primary: #ffffff;
+    --text-color: #222222;
+    --text-color-two: #ffffff;
+    --bg-secondary: #000000;
+    --card-background: #f4f4f4;
+    --bg-secondary-two: #111111;
+    --shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  }
+  
+  [data-theme="dark"] {
+    --primary-color: #4CAF50;
+    --secondary-color: #5cff8a;
+    --bg-primary: #000000;
+    --text-color: #ffffff;
+    --text-color-two: #222222;
+    --bg-secondary: #ffffff;
+    --card-background: #111111;
+    --bg-secondary-two: #f4f4f4;
+    --shadow: 0 2px 10px rgba(95, 95, 95, 0.2);
+  }
+  
+  /* Association Dashboard Styles */
+  .association-container {
+      display: flex;
+      min-height: 100vh;
+      background-color: var(--bg-primary);
+      color: var(--text-color);
+      font-family: "Raleway", sans-serif;
+  }
+  
+  .association-sidebar {
+      width: 280px;
+      background-color: var(--bg-secondary);
+      color: var(--text-color-two);
+      padding: 2rem 1rem;
+      position: fixed;
+      height: 100%;
+      transition: all 0.3s;
+  }
+  
+  .sidebar-header {
+      text-align: center;
+      margin-bottom: 2rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+  
+  .sidebar-logo {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      margin-bottom: 1rem;
+      object-fit: cover;
+      border: 3px solid var(--primary-color);
+  }
+  
+  .sidebar-nav {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+  }
+  
+  .sidebar-nav a {
+      color: var(--text-color-two);
+      text-decoration: none;
+      padding: 0.8rem 1rem;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      font-size: 0.95rem;
+  }
+  
+  .sidebar-nav a:hover, .sidebar-nav a.active {
+      background-color: var(--primary-color);
+      color: var(--text-color-two);
+  }
+  
+  .sidebar-nav a i {
+      width: 20px;
+      text-align: center;
+  }
+  
+  .association-main {
+      flex: 1;
+      margin-left: 280px;
+      padding: 2rem;
+  }
+  
+  .association-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 2rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid var(--card-background);
+  }
+  
+  .association-info {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+  }
+  
+  .association-logo {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid var(--primary-color);
+  }
+  
+  .dashboard-stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 3rem;
+  }
+  
+  .stat-card {
+      background-color: var(--bg-primary);
+      border-radius: 8px;
+      padding: 1.5rem;
+      box-shadow: var(--shadow);
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      transition: transform 0.3s ease;
+  }
+  
+  .stat-card:hover {
+      transform: translateY(-5px);
+  }
+  
+  .stat-icon {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+      color: white;
+  }
+  
+  .bg-primary {
+      background-color: var(--primary-color);
+  }
+  
+  .bg-success {
+      background-color: #28a745;
+  }
+  
+  .bg-info {
+      background-color: #17a2b8;
+  }
+  
+  .bg-warning {
+      background-color: #ffc107;
+  }
+  
+  .stat-content h3 {
+      font-size: 0.95rem;
+      margin-bottom: 0.5rem;
+      color: var(--text-color);
+      font-weight: 500;
+  }
+  
+  .stat-content p {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin: 0;
+      color: var(--primary-color);
+  }
+  
+  .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.5rem;
+  }
+  
+  .section-header h3 {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      color: var(--text-color);
+      font-size: 1.2rem;
+  }
+  
+  .btn-view-all {
+      color: var(--primary-color);
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: all 0.3s;
+  }
+  
+  .btn-view-all:hover {
+      color: var(--secondary-color);
+  }
+  
+  .projects-section {
+      margin-bottom: 3rem;
+  }
+  
+  .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.5rem;
+  }
+  
+  .project-card {
+      background-color: var(--bg-primary);
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: all 0.3s ease;
+  }
+  
+  .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+  }
+  
+  .project-header {
+      padding: 1rem;
+      background-color: var(--primary-color);
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  }
+  
+  .project-status {
+      background-color: white;
+      color: var(--primary-color);
+      padding: 0.2rem 0.5rem;
+      border-radius: 20px;
+      font-size: 0.7rem;
+      font-weight: 600;
+  }
+  
+  .project-body {
+      padding: 1.5rem;
+  }
+  
+  .project-title {
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+      color: var(--text-color);
+  }
+  
+  .project-description {
+      font-size: 0.85rem;
+      color: var(--text-color);
+      margin-bottom: 1rem;
+      line-height: 1.5;
+  }
+  
+  .progress-container {
+      margin-bottom: 1rem;
+  }
+  
+  .progress-label {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 0.3rem;
+      font-size: 0.8rem;
+      color: var(--text-color);
+  }
+  
+  .progress-bar {
+      height: 8px;
+      background-color: var(--card-background);
+      border-radius: 4px;
+      overflow: hidden;
+  }
+  
+  .progress {
+      height: 100%;
+      background-color: var(--primary-color);
+      border-radius: 4px;
+  }
+  
+  .project-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 1rem;
+      border-top: 1px solid var(--card-background);
+  }
+  
+  .project-date {
+      font-size: 0.8rem;
+      color: var(--text-color);
+  }
+  
+  .btn-manage {
+      background-color: var(--primary-color);
+      color: white;
+      border: none;
+      padding: 0.4rem 0.8rem;
+      border-radius: 4px;
+      font-size: 0.8rem;
+      cursor: pointer;
+      transition: all 0.3s;
+  }
+  
+  .btn-manage:hover {
+      background-color: var(--secondary-color);
+  }
+  
+  .donations-section {
+      margin-bottom: 2rem;
+  }
+  
+  .donations-table {
+      background-color: var(--bg-primary);
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+  }
+  
+  table {
+      width: 100%;
+      border-collapse: collapse;
+  }
+  
+  th, td {
+      padding: 1rem;
+      text-align: left;
+      border-bottom: 1px solid var(--card-background);
+  }
+  
+  th {
+      background-color: var(--primary-color);
+      color: white;
+      font-weight: 500;
+  }
+  
+  tr:hover {
+      background-color: rgba(76, 175, 80, 0.05);
+  }
+  
+  .donor-info {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+  }
+  
+  .donor-avatar {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      object-fit: cover;
+  }
+  
+  .donation-amount {
+      font-weight: 600;
+      color: var(--primary-color);
+  }
+  
+  .donation-date {
+      font-size: 0.85rem;
+      color: var(--text-color);
+  }
+  
+  @media (max-width: 1200px) {
+      .association-sidebar {
+          width: 240px;
+      }
+      .association-main {
+          margin-left: 240px;
+      }
+  }
+  
+  @media (max-width: 992px) {
+      .dashboard-stats {
+          grid-template-columns: repeat(2, 1fr);
+      }
+  }
+  
+  @media (max-width: 768px) {
+      .association-container {
+          flex-direction: column;
+      }
+      .association-sidebar {
+          width: 100%;
+          position: static;
+          height: auto;
+      }
+      .association-main {
+          margin-left: 0;
+      }
+      .dashboard-stats {
+          grid-template-columns: 1fr;
+      }
+      .projects-grid {
+          grid-template-columns: 1fr;
+      }
+  }

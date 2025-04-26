@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Espace Association - HelpHub</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="association.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="association-container">
+        <aside class="association-sidebar">
+            <div class="sidebar-header">
+                <img src="assets/logo.webp" alt="HelpHub Logo" class="sidebar-logo">
+                <h3>Espace Association</h3>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="#" class="active"><i class="fas fa-tachometer-alt"></i> Tableau de bord</a>
+                <a href="#"><i class="fas fa-project-diagram"></i> Mes projets</a>
+                <a href="#"><i class="fas fa-plus-circle"></i> Créer un projet</a>
+                <a href="#"><i class="fas fa-users"></i> Donateurs</a>
+                <a href="#"><i class="fas fa-cog"></i> Paramètres</a>
+                <a href="auth/login/logout.html"><i class="fas fa-sign-out-alt"></i> Déconnexion</a>
+            </nav>
+        </aside>
+
+        <main class="association-main">
+            <header class="association-header">
+                <h2><i class="fas fa-tachometer-alt"></i> Tableau de bord</h2>
+                <div class="association-info">
+                    <span id="association-name">Croissant Rouge Tunisien</span>
+                    <img src="assets/association1.jpg" alt="Association Logo" class="association-logo">
+                </div>
+            </header>
+
+            <div class="dashboard-stats">
+                <div class="stat-card">
+                    <div class="stat-icon bg-primary">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3>Projets actifs</h3>
+                        <p id="active-projects">5</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon bg-success">
+                        <i class="fas fa-hand-holding-heart"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3>Total collecté</h3>
+                        <p id="total-collected">24,500 TND</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon bg-info">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3>Donateurs</h3>
+                        <p id="total-donors">127</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon bg-warning">
+                        <i class="fas fa-bullhorn"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3>Projets à terminer</h3>
+                        <p id="ending-projects">2</p>
+                    </div>
+                </div>
+            </div>
+
+            <section class="projects-section">
+                <div class="section-header">
+                    <h3><i class="fas fa-project-diagram"></i> Mes projets récents</h3>
+                    <a href="#" class="btn-view-all">Voir tout <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="projects-grid" id="recent-projects">
+                    <!-- Projects will be loaded here -->
+                </div>
+            </section>
+
+            <section class="donations-section">
+                <div class="section-header">
+                    <h3><i class="fas fa-hand-holding-heart"></i> Dons récents</h3>
+                    <a href="#" class="btn-view-all">Voir tout <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="donations-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Projet</th>
+                                <th>Donateur</th>
+                                <th>Montant</th>
+                                <th>Date</th>
+                            </tr>
+                        </thead>
+                        <tbody id="recent-donations">
+                            <!-- Donations will be loaded here -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="association.js"></script>
+</body>
+</html>

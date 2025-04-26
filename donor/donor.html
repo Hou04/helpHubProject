@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Espace Donateur - HelpHub</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="donor.css" rel="stylesheet">
+</head>
+<body>
+    <div class="donor-container">
+        <aside class="donor-sidebar">
+            <div class="sidebar-header">
+                <img src="assets/logo.webp" alt="HelpHub Logo" class="sidebar-logo">
+                <h3>Espace Donateur</h3>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="#" class="active"><i class="fas fa-home"></i> Tableau de bord</a>
+                <a href="#"><i class="fas fa-search"></i> Projets</a>
+                <a href="#"><i class="fas fa-hand-holding-heart"></i> Mes dons</a>
+                <a href="#"><i class="fas fa-user"></i> Mon profil</a>
+                <a href="#"><i class="fas fa-sign-out-alt"></i> Déconnexion</a>
+            </nav>
+        </aside>
+
+        <main class="donor-main">
+            <header class="donor-header">
+                <h2>Tableau de bord</h2>
+                <div class="user-info">
+                    <span>Bienvenue, <strong id="username">Donateur</strong></span>
+                    <img src="assets/user-avatar.jpg" alt="User Avatar" class="user-avatar">
+                </div>
+            </header>
+
+            <div class="donor-stats">
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fas fa-hand-holding-usd"></i></div>
+                    <div class="stat-info">
+                        <h3>Total donné</h3>
+                        <p id="total-donated">0 TND</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fas fa-project-diagram"></i></div>
+                    <div class="stat-info">
+                        <h3>Projets soutenus</h3>
+                        <p id="projects-supported">0</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fas fa-calendar-check"></i></div>
+                    <div class="stat-info">
+                        <h3>Dernier don</h3>
+                        <p id="last-donation">Aucun</p>
+                    </div>
+                </div>
+            </div>
+
+            <section class="donor-projects">
+                <h3><i class="fas fa-lightbulb"></i> Projets recommandés</h3>
+                <div class="projects-grid" id="recommended-projects">
+                    <!-- Projects will be loaded here -->
+                </div>
+            </section>
+
+            <section class="donor-history">
+                <h3><i class="fas fa-history"></i> Historique des dons</h3>
+                <div class="donations-list" id="donations-history">
+                    <!-- Donations will be loaded here -->
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="donor.js"></script>
+</body>
+</html>
